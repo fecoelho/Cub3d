@@ -3,7 +3,6 @@
 
 # include "mlx.h"
 # include "libft.h"
-# include "get_next_line.h"
 # include <math.h>
 
 # define INT_MAX 2147483647
