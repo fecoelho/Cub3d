@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   render_2d.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcoelho </var/mail/fcoelho>                +#+  +:+       +#+        */
+/*   By: fcoelho <fcoelho@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 14:44:43 by fcoelho           #+#    #+#             */
 /*   Updated: 2020/10/26 14:44:46 by fcoelho          ###   ########.fr       */
@@ -47,7 +47,7 @@ void	put_minimap(t_vars *vars)
 		{
 			if (vars->map->map_grid[i][j] == '1')
 				ft_rectangle(vars->data, *vars->point,
-							 TILE_SIZE * MAP2D_SCALE, TILE_SIZE * MAP2D_SCALE);
+							TILE_SIZE * MAP2D_SCALE, TILE_SIZE * MAP2D_SCALE);
 			vars->point->x = vars->point->x + TILE_SIZE * MAP2D_SCALE;
 		}
 		vars->point->y = vars->point->y + TILE_SIZE * MAP2D_SCALE;

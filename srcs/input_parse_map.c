@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   input_parse_map.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcoelho </var/mail/fcoelho>                +#+  +:+       +#+        */
+/*   By: fcoelho <fcoelho@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 14:43:49 by fcoelho           #+#    #+#             */
 /*   Updated: 2020/10/26 14:43:50 by fcoelho          ###   ########.fr       */
@@ -42,8 +42,8 @@ int			validate_map(t_map *map)
 		while (j < map->n_column)
 		{
 			if ((map->map_grid[i][j] == '0' || map->map_grid[i][j] == '2') &&
-				((i == 0 || j == 0 || i == map->n_row - 1 || j == map->n_column - 1)
-				 || !check_char(map, i, j)))
+			((i == 0 || j == 0 || i == map->n_row - 1 || j == map->n_column - 1)
+				|| !check_char(map, i, j)))
 				return (FALSE);
 			j++;
 		}
@@ -86,7 +86,7 @@ static int	parse_row_map(t_map *map, char *line, int row)
 		if (line[i] == '2')
 		{
 			map->sprite_posit = (t_point **)allocate_dynamic(
-					(void **)map->sprite_posit, sizeof(t_point *), map->n_sprites);
+			(void **)map->sprite_posit, sizeof(t_point *), map->n_sprites);
 			map->sprite_posit[map->n_sprites] = create_point(i, row, 0);
 			map->n_sprites++;
 		}
@@ -103,7 +103,7 @@ int			get_map_info(t_map *map, char *line, int *row, int *ismap)
 	i = *row;
 	n_col = 0;
 	map->map_grid = (char **)allocate_dynamic((void **)map->map_grid,
-											  sizeof(char *), i);
+			sizeof(char *), i);
 	if (!(n_col = parse_row_map(map, line, map->n_row)) || n_col < 0)
 	{
 		free(line);

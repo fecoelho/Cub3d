@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   auxiliar_funct.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcoelho </var/mail/fcoelho>                +#+  +:+       +#+        */
+/*   By: fcoelho <fcoelho@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 14:41:37 by fcoelho           #+#    #+#             */
 /*   Updated: 2020/10/26 14:41:39 by fcoelho          ###   ########.fr       */

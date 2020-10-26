@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   key_update.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcoelho </var/mail/fcoelho>                +#+  +:+       +#+        */
+/*   By: fcoelho <fcoelho@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 14:44:05 by fcoelho           #+#    #+#             */
 /*   Updated: 2020/10/26 14:44:08 by fcoelho          ###   ########.fr       */
@@ -27,15 +27,15 @@ static void	calculate_offset_player(int keycode, t_vars *vars)
 
 	move_step = vars->player->walk_direction * vars->player->move_speed;
 	offset.x = (keycode == W_KEY || keycode == S_KEY) ?
-			   cos(vars->player->rotation_angle) * move_step :
-			   cos(vars->player->rotation_angle + SOUTH) * move_step;
+				cos(vars->player->rotation_angle) * move_step :
+				cos(vars->player->rotation_angle + SOUTH) * move_step;
 	offset.y = (keycode == W_KEY || keycode == S_KEY) ?
-			   sin(vars->player->rotation_angle) * move_step :
-			   sin(vars->player->rotation_angle + SOUTH) * move_step;
+				sin(vars->player->rotation_angle) * move_step :
+				sin(vars->player->rotation_angle + SOUTH) * move_step;
 	next_posit.x = vars->player->posit->x + offset.x;
 	next_posit.y = vars->player->posit->y + offset.y;
 	if (!(is_wall(vars->map, next_posit.x + offset.x, next_posit.y + offset.y,
-				  '1')) && !(is_wall(vars->map, next_posit.x, next_posit.y, '2')))
+		'1')) && !(is_wall(vars->map, next_posit.x, next_posit.y, '2')))
 	{
 		vars->player->posit->x = next_posit.x;
 		vars->player->posit->y = next_posit.y;

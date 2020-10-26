@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   raycast.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcoelho </var/mail/fcoelho>                +#+  +:+       +#+        */
+/*   By: fcoelho <fcoelho@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 14:44:25 by fcoelho           #+#    #+#             */
 /*   Updated: 2020/10/26 14:44:27 by fcoelho          ###   ########.fr       */
@@ -30,11 +30,11 @@ static void	check_closest_wall(t_vars *vars, t_ray *ray, double ray_angle)
 	cast_ray(vars, ray_angle, HORZ, &horz_intercept);
 	cast_ray(vars, ray_angle, VERT, &vert_intercept);
 	dist_horz = is_end_window(vars->map, horz_intercept.x, horz_intercept.y) ?
-				INT_MAX : dist_btw_points(vars->player->posit->x, vars->player->posit->y,
-										  horz_intercept.x, horz_intercept.y);
+		INT_MAX : dist_btw_points(vars->player->posit->x,
+		vars->player->posit->y, horz_intercept.x, horz_intercept.y);
 	dist_vert = is_end_window(vars->map, vert_intercept.x, vert_intercept.y) ?
-				INT_MAX : dist_btw_points(vars->player->posit->x, vars->player->posit->y,
-										  vert_intercept.x, vert_intercept.y);
+		INT_MAX : dist_btw_points(vars->player->posit->x,
+		vars->player->posit->y, vert_intercept.x, vert_intercept.y);
 	if (dist_horz < dist_vert)
 		assign_ray(ray, &horz_intercept, dist_horz, HORZ);
 	else
@@ -50,7 +50,7 @@ int			**ft_raycast(t_vars *vars)
 	while (i < vars->map->num_rays)
 	{
 		vars->ray[i]->ray_angle = vars->player->rotation_angle +
-								  atan2(i - vars->map->num_rays / 2, vars->player->dist_proj_plane);
+		atan2(i - vars->map->num_rays / 2, vars->player->dist_proj_plane);
 		vars->ray[i]->ray_angle = ft_normalize_angle(vars->ray[i]->ray_angle);
 		check_closest_wall(vars, vars->ray[i], vars->ray[i]->ray_angle);
 		i++;

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   input_check_args.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcoelho </var/mail/fcoelho>                +#+  +:+       +#+        */
+/*   By: fcoelho <fcoelho@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 14:42:27 by fcoelho           #+#    #+#             */
 /*   Updated: 2020/10/26 14:43:34 by fcoelho          ###   ########.fr       */

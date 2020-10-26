@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   raycast_intercept.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcoelho </var/mail/fcoelho>                +#+  +:+       +#+        */
+/*   By: fcoelho <fcoelho@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 14:44:36 by fcoelho           #+#    #+#             */
 /*   Updated: 2020/10/26 14:44:37 by fcoelho          ###   ########.fr       */
@@ -35,7 +35,7 @@ int			ray_facing(double angle, int way)
 }
 
 static void	horz_inter(t_vars *vars, t_point *intercept, double ray_angle,
-						  t_point *step)
+							t_point *step)
 {
 	intercept->y = floor(vars->player->posit->y / TILE_SIZE) * TILE_SIZE;
 	intercept->y += ray_facing(ray_angle, ray_down) ? TILE_SIZE : 0;
@@ -49,7 +49,7 @@ static void	horz_inter(t_vars *vars, t_point *intercept, double ray_angle,
 }
 
 static void	vert_inter(t_vars *vars, t_point *intercept, double ray_angle,
-						  t_point *step)
+							t_point *step)
 {
 	intercept->x = floor(vars->player->posit->x / TILE_SIZE) * TILE_SIZE;
 	intercept->x += ray_facing(ray_angle, ray_right) ? TILE_SIZE : 0;
@@ -63,7 +63,7 @@ static void	vert_inter(t_vars *vars, t_point *intercept, double ray_angle,
 }
 
 void		cast_ray(t_vars *vars, double ray_angle, int coord,
-					 t_point *next)
+						t_point *next)
 {
 	t_point	step;
 	double	x_chk;
@@ -75,10 +75,10 @@ void		cast_ray(t_vars *vars, double ray_angle, int coord,
 	while (!is_end_window(vars->map, next->x, next->y))
 	{
 		x_chk = next->x + ((ray_facing(ray_angle, ray_left) && coord == VERT) ?
-						   -1 : 0);
+							-1 : 0);
 		x_chk += ((ray_facing(ray_angle, ray_right) && coord == VERT) ? 1 : 0);
 		y_chk = next->y + ((ray_facing(ray_angle, ray_down) && coord == HORZ) ?
-						   1 : 0);
+							1 : 0);
 		y_chk += ((ray_facing(ray_angle, ray_up) && coord == HORZ) ? -1 : 0);
 		if (is_wall(vars->map, x_chk, y_chk, '1'))
 			break ;

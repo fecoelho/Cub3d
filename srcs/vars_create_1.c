@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   vars_create_1.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcoelho </var/mail/fcoelho>                +#+  +:+       +#+        */
+/*   By: fcoelho <fcoelho@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 14:45:10 by fcoelho           #+#    #+#             */
 /*   Updated: 2020/10/26 14:45:11 by fcoelho          ###   ########.fr       */
@@ -19,14 +19,14 @@ static t_tex	*load_texture(void *mlx_ptr, char *path)
 	tex = ft_calloc(1, sizeof(t_tex));
 	tex->data = ft_calloc(1, sizeof(t_data));
 	if (!(tex->data->img = mlx_xpm_file_to_image(mlx_ptr, path, &tex->width,
-												 &tex->height)))
+					&tex->height)))
 	{
 		free(tex->data);
 		free(tex);
 		return (NULL);
 	}
 	tex->data->addr = mlx_get_data_addr(tex->data->img, &tex->data->bpp,
-										&tex->data->size_line, &tex->data->endian);
+			&tex->data->size_line, &tex->data->endian);
 	return (tex);
 }
 
@@ -61,7 +61,7 @@ static t_player	*create_player(t_map *map, int move_speed, double rotat_speed)
 	player->rotation_speed = rotat_speed;
 	player->rotation_angle = map->rotation_angle;
 	assign_point(player->posit, map->init_posit->x, map->init_posit->y,
-				 RAYS_2D_COLOR);
+			RAYS_2D_COLOR);
 	check_n_free(map->init_posit);
 	return (player);
 }

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   save_bmp_file.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcoelho </var/mail/fcoelho>                +#+  +:+       +#+        */
+/*   By: fcoelho <fcoelho@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 14:44:56 by fcoelho           #+#    #+#             */
 /*   Updated: 2020/10/26 14:44:58 by fcoelho          ###   ########.fr       */
@@ -26,8 +26,7 @@ static int	store_color(t_vars *vars, int x, int y)
 	unsigned char	addr_color[4];
 
 	color = *(unsigned int *)(vars->data->addr +
-							  vars->map->width * (vars->map->height - y - 1) * 4 +
-							  x * 4);
+		vars->map->width * (vars->map->height - y - 1) * 4 + x * 4);
 	little_endian_int(&addr_color[0], color);
 	return (*(unsigned int*)(addr_color));
 }

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   render_3d.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcoelho </var/mail/fcoelho>                +#+  +:+       +#+        */
+/*   By: fcoelho <fcoelho@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 14:44:50 by fcoelho           #+#    #+#             */
 /*   Updated: 2020/10/26 14:44:52 by fcoelho          ###   ########.fr       */
@@ -33,22 +33,22 @@ static int	put_text(t_vars *vars, int y, int i, double *limit)
 	ymax = limit[1];
 	ray = vars->ray[i];
 	if (ray_facing(ray->ray_angle, ray_up) && ray->coord == HORZ)
-		return (get_texture_color(vars->tex[north],
-								  (int)ray->collision->x % vars->tex[north]->width,
-								  (y - ymin) * (vars->tex[north]->height) / (ymax - ymin)));
+		return (get_texture_color(vars->tex[north], \
+			(int)ray->collision->x % vars->tex[north]->width, \
+			(y - ymin) * (vars->tex[north]->height) / (ymax - ymin)));
 	else if (ray_facing(ray->ray_angle, ray_down) && ray->coord == HORZ)
-		return (get_texture_color(vars->tex[south],
-								  (int)ray->collision->x % vars->tex[south]->width,
-								  (y - ymin) * (vars->tex[south]->height) / (ymax - ymin)));
+		return (get_texture_color(vars->tex[south], \
+			(int)ray->collision->x % vars->tex[south]->width, \
+			(y - ymin) * (vars->tex[south]->height) / (ymax - ymin)));
 	else if (ray_facing(ray->ray_angle, ray_right) && ray->coord == VERT)
-		return (get_texture_color(vars->tex[east],
-								  (int)ray->collision->y % vars->tex[east]->width,
-								  (y - ymin) * (vars->tex[east]->height) / (ymax - ymin)));
+		return (get_texture_color(vars->tex[east], \
+			(int)ray->collision->y % vars->tex[east]->width, \
+			(y - ymin) * (vars->tex[east]->height) / (ymax - ymin)));
 	else if (ray_facing(ray->ray_angle, ray_left) && ray->coord == VERT)
-		return (get_texture_color(vars->tex[west],
-								  (int)ray->collision->y % vars->tex[west]->width,
-								  (y - ymin) * (vars->tex[west]->height) / (ymax - ymin)));
-	return (0);
+		return (get_texture_color(vars->tex[west], \
+			(int)ray->collision->y % vars->tex[west]->width, \
+			(y - ymin) * (vars->tex[west]->height) / (ymax - ymin)));
+		return (0);
 }
 
 static void	put_colors(t_vars *vars, double wall_proj_height, int i)
@@ -85,9 +85,9 @@ void		put_3dmap(t_vars *vars)
 	while (i < vars->map->num_rays)
 	{
 		correct_dist_plane = vars->ray[i]->dist_wall *
-							 cos(vars->ray[i]->ray_angle - vars->player->rotation_angle);
+		cos(vars->ray[i]->ray_angle - vars->player->rotation_angle);
 		wall_proj_height = TILE_SIZE / correct_dist_plane *
-						   vars->player->dist_proj_plane;
+		vars->player->dist_proj_plane;
 		put_colors(vars, wall_proj_height, i);
 		i++;
 	}

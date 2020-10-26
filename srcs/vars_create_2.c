@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   vars_create_2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcoelho </var/mail/fcoelho>                +#+  +:+       +#+        */
+/*   By: fcoelho <fcoelho@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 14:45:18 by fcoelho           #+#    #+#             */
 /*   Updated: 2020/10/26 14:45:21 by fcoelho          ###   ########.fr       */
@@ -19,7 +19,7 @@ t_data		*create_image(void *mlx_ptr, t_map *map)
 	img = ft_calloc(1, sizeof(t_data));
 	img->img = mlx_new_image(mlx_ptr, map->width, map->height);
 	img->addr = mlx_get_data_addr(img->img, &img->bpp, &img->size_line,
-								  &img->endian);
+	&img->endian);
 	return (img);
 }
 

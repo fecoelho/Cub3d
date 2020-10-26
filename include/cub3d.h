@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcoelho </var/mail/fcoelho>                +#+  +:+       +#+        */
+/*   By: fcoelho <fcoelho@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 14:40:58 by fcoelho           #+#    #+#             */
 /*   Updated: 2020/10/26 14:41:04 by fcoelho          ###   ########.fr       */
@@ -206,7 +206,7 @@ int				get_texture_color(t_tex *tex, int x, int y);
 int				ray_facing(double angle, int way);
 int				**ft_raycast(t_vars *vars);
 void			cast_ray(t_vars *vars, double ray_angle, int coord,
-						 t_point *next);
+							t_point *next);
 
 /*
 ** free pointer functions

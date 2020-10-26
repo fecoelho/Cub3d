@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   input_read_n_validate.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcoelho </var/mail/fcoelho>                +#+  +:+       +#+        */
+/*   By: fcoelho <fcoelho@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 14:43:57 by fcoelho           #+#    #+#             */
 /*   Updated: 2020/10/26 14:43:59 by fcoelho          ###   ########.fr       */
@@ -46,14 +46,14 @@ static int	check_lack_info(t_map *map)
 	else if (!map->n_column || !map->n_row)
 		return (ft_error(map, -10));
 	else if (!map->width || !map->height ||
-			 map->width < map->n_column || map->height < map->n_row)
+				map->width < map->n_column || map->height < map->n_row)
 		return (ft_error(map, -11));
 	else if (map->color_ceiling < 0 || map->color_floor < 0)
 		return (ft_error(map, -12));
 	else if (!map->path[north] || !*map->path[north] || !map->path[south] ||
-			 !*map->path[south] || !map->path[east] || !*map->path[east] ||
-			 !map->path[west] || !*map->path[west] || !map->path[sprite] ||
-			 !*map->path[sprite])
+				!*map->path[south] || !map->path[east] || !*map->path[east] ||
+				!map->path[west] || !*map->path[west] || !map->path[sprite] ||
+				!*map->path[sprite])
 		return (ft_error(map, -13));
 	else if (!map->sprite_posit)
 		return (ft_error(map, -14));
@@ -75,7 +75,7 @@ static int	fill_columns(t_map *map)
 			j++;
 		if (j < map->n_column)
 			map->map_grid[i] = ft_strjoin_n_free(map->map_grid[i],
-												 ft_calloc_char(map->n_column - j, ' '));
+			ft_calloc_char(map->n_column - j, ' '));
 		i++;
 	}
 	return (check_lack_info(map));

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   game.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcoelho </var/mail/fcoelho>                +#+  +:+       +#+        */
+/*   By: fcoelho <fcoelho@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 14:42:03 by fcoelho           #+#    #+#             */
 /*   Updated: 2020/10/26 14:42:05 by fcoelho          ###   ########.fr       */
@@ -31,7 +31,7 @@ int			init_game(t_vars *vars, int argc)
 	if (argc == 2)
 	{
 		vars->win = mlx_new_window(vars->mlx, vars->map->width,
-								   vars->map->height, "CUB3D ::: by vscabell ::: 42 SP");
+			vars->map->height, "CUB3D ::: by vscabell ::: 42 SP");
 		mlx_put_image_to_window(vars->mlx, vars->win, vars->data->img, 0, 0);
 	}
 	else

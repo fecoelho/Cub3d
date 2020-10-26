@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   sprite.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcoelho </var/mail/fcoelho>                +#+  +:+       +#+        */
+/*   By: fcoelho <fcoelho@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 14:45:03 by fcoelho           #+#    #+#             */
 /*   Updated: 2020/10/26 14:45:04 by fcoelho          ###   ########.fr       */
@@ -67,7 +67,7 @@ static void	calculate_sprite(t_vars *vars, int s)
 	if (vars->sprite[s]->angle_dif < FOV / 2)
 	{
 		vars->sprite[s]->height = (TILE_SIZE * vars->player->dist_proj_plane /
-								   vars->sprite[s]->dist);
+									vars->sprite[s]->dist);
 		vars->sprite[s]->width = (vars->sprite[s]->height * vars->tex[sprite]->
 				width / vars->tex[sprite]->height);
 		xi = tan(vars->sprite[s]->angle - vars->player->rotation_angle) * vars->

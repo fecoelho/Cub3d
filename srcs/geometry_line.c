@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   geometry_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcoelho </var/mail/fcoelho>                +#+  +:+       +#+        */
+/*   By: fcoelho <fcoelho@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 14:42:11 by fcoelho           #+#    #+#             */
 /*   Updated: 2020/10/26 14:42:43 by fcoelho          ###   ########.fr       */
