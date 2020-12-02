@@ -27,3 +27,6 @@ E pronto! ✔️ O programa deve executar em sua tela.
 ```
 
 > ⚠️ Você pode criar mapas para o programa, caso queira saber como, entre em contato.
+
+---
+![GitHub top language](https://img.shields.io/github/languages/top/fecoelho/cub3d?color=lightgray) ![Lines of code](https://img.shields.io/tokei/lines/github/fecoelho/cub3d?color=lighgray)
