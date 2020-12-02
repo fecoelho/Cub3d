@@ -9,7 +9,7 @@ Representação 3D em primeira pessoa de um labirinto usando raycasting, semelha
 
 <a name="pr--requisitos"></a>
 ### Pré-requisitos
-O projeto é executado usando o MiniLibX, uma versão simplificada do Xlib. Portanto, ele só pode ser executado em MacOSX, de preferência em um computador com uma CPU sólida.
+O projeto é executado usando o MiniLibX, uma versão simplificada do Xlib. Portanto, ele só pode ser executado em Unix
 
 <a name="como-executar"></a>
 ### Como executar
